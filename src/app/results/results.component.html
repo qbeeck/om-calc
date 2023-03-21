@@ -1,0 +1,39 @@
+Результаты тестировщика {{ settings.name }}
+
+<table>
+  <thead>
+    <tr>
+      <th>Раунд</th>
+      <th>Латентный</th>
+      <th>Моторный</th>
+      <th>Общий</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of [].constructor(totalRounds); let index = index">
+      <td>{{ index + 1 }}</td>
+      <td>{{ latency[index] }}</td>
+      <td>{{ motor[index] }}</td>
+      <td>{{ general[index] }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>{{ latencyAverage }}</td>
+      <td>{{ motorAverage }}</td>
+      <td>{{ generalAverage }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Латентный: {{ latency | json }}
+</p>
+
+<p>
+
+  Моторный: {{ motor | json }}
+</p>
+
+<p>
+  Общий: {{ general | json }}
+</p>

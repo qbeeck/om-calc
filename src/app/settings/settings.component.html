@@ -1,0 +1,11 @@
+<div class="form">
+  <label class="form__label" for="name">Имя испытуемоего</label>
+  <input id="name" class="form__select" [(ngModel)]="name" type="text" />
+
+  <label class="form__label" for="select">Выберите цвет</label>
+  <select class="form__select" id="select" [(ngModel)]="color">
+    <option class="form__option" *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+  </select>
+
+  <button class="form__button" (click)="onSubmit()">Начать тест</button>
+</div>
