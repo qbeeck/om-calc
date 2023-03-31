@@ -1,5 +1,5 @@
 <div class="form">
-  <label class="form__label" for="name">Имя испытуемоего</label>
+  <label class="form__label" for="name">Имя</label>
   <input id="name" class="form__select" [(ngModel)]="name" type="text" />
 
   <label class="form__label" for="select">Выберите цвет</label>
@@ -7,5 +7,5 @@
     <option class="form__option" *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
   </select>
 
-  <button class="form__button" (click)="onSubmit()">Начать тест</button>
+  <button class="form__button" (click)="onSubmit()">Запустить тест</button>
 </div>

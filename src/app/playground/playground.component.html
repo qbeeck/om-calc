@@ -1,12 +1,12 @@
 <ng-container *ngIf="playground.started; then startedRef; else notStartedRef"></ng-container>
 
 <ng-template #startedRef>
-  <span>Тестировщик {{ settings.name }}</span>
-  <span>Попытка №{{ playground.currentRound$ | async }}</span>
+  <span style="text-align: center">Тестировщик {{ settings.name }}</span>
+  <span style="text-align: center">Попытка №{{ playground.currentRound$ | async }}</span>
 
   <div *ngIf="playground.circleData$ | async as data" class="container">
-    <div *ngIf="data.showCircle" class="circle" [style.backgroundColor]="settings.color" [style.top]="data.top"
-      [style.left]="data.left" [style.width]="data.size" [style.height]="data.size"></div>
+    <div *ngIf="data.showCircle" class="circle" [style.backgroundColor]="settings.color" [style.top]="'30%'"
+      [style.left]="'46%'" [style.width]="data.size" [style.height]="data.size"></div>
   </div>
 </ng-template>
 

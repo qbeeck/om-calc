@@ -1,12 +1,12 @@
-Результаты тестировщика {{ settings.name }}
+Результаты испытания {{ settings.name }}
 
 <table>
   <thead>
     <tr>
-      <th>Раунд</th>
-      <th>Латентный</th>
-      <th>Моторный</th>
-      <th>Общий</th>
+      <th>Тест</th>
+      <th>Латентная</th>
+      <th>Моторная</th>
+      <th>Общая</th>
     </tr>
   </thead>
   <tbody>
@@ -26,14 +26,14 @@
 </table>
 
 <p>
-  Латентный: {{ latency | json }}
+  Латентная: {{ latency | json }}
 </p>
 
 <p>
 
-  Моторный: {{ motor | json }}
+  Моторная: {{ motor | json }}
 </p>
 
 <p>
-  Общий: {{ general | json }}
+  Общая: {{ general | json }}
 </p>
